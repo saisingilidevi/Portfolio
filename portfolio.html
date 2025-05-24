@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Certificates</title>
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+  <div class="portfolio-container">
+    <h1>My Certificates</h1>
+
+    <div class="certificates-grid">
+      <div class="certificate-card" onclick="openModal('Singilidevi_Aug_2023_internship_46686[313] Coincent Internship_page-0001.jpg', 'image')">
+        <h3>COINCENT Certification</h3>
+        <img src="Singilidevi_Aug_2023_internship_46686[313] Coincent Internship_page-0001.jpg" alt="COINCENT Certification">
+      </div>
+      <div class="certificate-card" onclick="openModal('Programming in Java (1)_page-0001.jpg', 'image')">
+        <h3>NPTEL Certification</h3>
+        <img src="Programming in Java (1)_page-0001.jpg" alt="NPTEL Certification">
+      </div>
+      <div class="certificate-card" onclick="openModal('[CERT]IBM_watsonx_ai_Technical_Essentials_Badge20241018-7-frfg7p_page-0001.jpg', 'image')">
+        <h3>IBM Certificate</h3>
+        <img src="[CERT]IBM_watsonx_ai_Technical_Essentials_Badge20241018-7-frfg7p_page-0001.jpg" alt="IBM Certificate">
+      </div>
+       <div class="certificate-card" onclick="openModal('Tata Imagination Challenge Participation_page-0001.jpg', 'image')">
+        <h3>TATA Certificate</h3>
+        <img src="Tata Imagination Challenge Participation_page-0001.jpg" alt="TATA Certificate">
+      </div>
+       <div class="certificate-card" onclick="openModal('(CISCO)Introduction_to_Cybersecurity_CERT20241012_page-0001.jpg', 'image')">
+        <h3>CISCO Certificate</h3>
+        <img src="(CISCO)Introduction_to_Cybersecurity_CERT20241012_page-0001.jpg" alt="CISCO Certificate">
+      </div>
+      <div class="certificate-card" onclick="openModal('Hema Sai Subrahmanyam Singilidevi_certificate_page-0001 (1).jpg', 'image')">
+        <h3>SKILLDZIRE Certificate</h3>
+        <img src="Hema Sai Subrahmanyam Singilidevi_certificate_page-0001 (1).jpg" alt="SKILLDZIRE Certificate">
+      </div>
+      <div class="certificate-card" onclick="openModal('IBM PY0101EN Certificate _ Cognitive Class(python for datascience)_page-0001.jpg', 'image')">
+        <h3>IBM Certificate</h3>
+        <img src="IBM PY0101EN Certificate _ Cognitive Class(python for datascience)_page-0001.jpg" alt="IBM Certificate">
+      </div>
+    </div>
+  </div>
+   <!-- Modal Container -->
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modal-content" class="modal-content"></div>
+  </div>
+
+  <script>
+    function openModal(src, type) {
+      const modal = document.getElementById('modal');
+      const content = document.getElementById('modal-content');
+      content.innerHTML = type === 'image'
+        ? `<img src="${src}" alt="Certificate">`
+        : `<iframe src="${src}" frameborder="0"></iframe>`;
+      modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+      document.getElementById('modal-content').innerHTML = '';
+    }
+
+    // Optional: Close modal on outside click
+    window.onclick = function(event) {
+      const modal = document.getElementById('modal');
+      if (event.target == modal) closeModal();
+    }
+  </script>
+</body>
+</html>
